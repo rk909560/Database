@@ -347,7 +347,7 @@ fa.film_id=f.film_id where f.title ='Gone with the Wind';
 
 
 
-#Question 11: Retrieve the customer names along with the total amount they've spent on rentals.
+#Question 11: Retrieve the customer names along with the total amount they have spent on rentals.
 select concat(first_name,' ',last_name)'Name',sum(amount)'Total_Amount_spent' from customer c join payment p on c.customer_id=p.customer_id join rental r on p.rental_id=r.rental_id
 group by c.customer_id order by Total_Amount_spent;
 
@@ -360,7 +360,7 @@ r.customer_id=c.customer_id join address a on c.address_id=a.address_id join cit
 
 
 
-#Question 13: Display the top 5 rented movies along with the number of times they've been rented.
+#Question 13: Display the top 5 rented movies along with the number of times they have been rented.
 
 select title,count(rental_id)Rental_Count from film f join inventory i on f.film_id=i.film_id join rental r on i.inventory_id=r.inventory_id group by title
 order by Rental_count desc limit 5;
