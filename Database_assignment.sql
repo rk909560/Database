@@ -484,9 +484,10 @@ select * from film_actor;
 /*
 Ques 3. Third Normal Form (3NF):
 
- a. Identify a table in Sakila that violates 3NF. Describe the transitive dependencies 
+ a. Identify a table in Sakila that violates 3NF. Describe the transitive dependencies present and outline the steps to normalize the table to 3NF.
 
- present and outline the steps to normalize the table to 3NF.
+The film table is a example that can violate 3NF.
+language_id & language.name the film’s language name depends on language_id, not directly on film_id.
 
 
 Ques 4. Normalization Process:
